@@ -3,10 +3,10 @@ import com.matthewprenger.cursegradle.CurseRelation
 import com.matthewprenger.cursegradle.Options
 
 plugins {
-    kotlin("jvm") version "2.0.0"
-    kotlin("plugin.serialization") version "2.0.0"
+    kotlin("jvm") version "2.0.20"
+    kotlin("plugin.serialization") version "2.0.20"
     id("fabric-loom") version "1.7-SNAPSHOT"
-    id("com.modrinth.minotaur") version "2.+"
+    id("com.modrinth.minotaur") version "2.8.7"
     id("com.matthewprenger.cursegradle") version "1.4.0"
     id("java")
 }
@@ -26,8 +26,7 @@ dependencies {
     // kotlin
     implementation(kotlin("stdlib"))
     // event system
-    implementation("me.obsilabor:alert:1.0.8")
-    include("me.obsilabor:alert:1.0.8")
+    include(implementation("me.obsilabor", "alert", "1.0.8"))
     // paper
     /**
      * I'm not using userdev here because I think it would cause issues together with loom.
@@ -37,11 +36,11 @@ dependencies {
     // fabric
     minecraft("com.mojang:minecraft:1.21")
     mappings("net.fabricmc:yarn:1.21+build.7")
-    modImplementation("net.fabricmc:fabric-loader:0.15.11")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:0.100.4+1.21")
-    modImplementation("net.fabricmc:fabric-language-kotlin:1.11.0+kotlin.2.0.0")
+    modImplementation("net.fabricmc:fabric-loader:0.16.5")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:0.102.0+1.21")
+    modImplementation("net.fabricmc:fabric-language-kotlin:1.12.1+kotlin.2.0.20")
     // modmenu
-    modApi("maven.modrinth:modmenu:11.0.1")
+    modApi("maven.modrinth:modmenu:11.0.2")
     // yacl
     modApi("dev.isxander:yet-another-config-lib:3.5.0+1.21-fabric")
 }
